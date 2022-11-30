@@ -1,19 +1,17 @@
-<html>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-    <body>
-        <form method="post" action="/editar/:id">
-            item=<input type="text" name="item">
-            <br>
-            qty=<input type="text" name="qty">
-            <br>
-            size=<input type="text" name="size">
-            <br>
-            Status=<input type="text" name="status">
-            <br>
-            <input type="submit" name="enviar">
-        </form>
-    </body>
-</html>
+<div id="main">
+
+    <form action="./<%=element._id%>" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="item" name="item" value="<%=element.item%>">
+            <label for="name">Qty</label>
+            <input type="text" id="qty" name="qty" value="<%=element.qty%>">
+            <label for="name">Status</label>
+            <input type="text" id="status" name="status" value="<%=element.status%>">
+            <label for="name">Size</label>
+            <input type="text" id="size" name="size" value="<%=JSON.stringify(element.size)%>" size="30">
+    
+    
+            <input type="submit" class="form-submit" value="Edit">
+    </form>
+    
+</div>
